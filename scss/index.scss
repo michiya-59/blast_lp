@@ -480,13 +480,13 @@ p, h3, h4, b{
   margin-top: 5rem;
   .usage_flow_item{
     padding: 2.6rem 7.5rem;
-    border: 3px solid #16B0EA;
+    border: 3px solid $sub-blue-main-color;
     border-radius: 1rem;
     text-align: center;
     .usage_flow_title{
       font-size: 3rem;
       font-weight: bold;
-      color: #16B0EA;
+      color: $sub-blue-main-color;
       margin-bottom: 2rem;
     }
     .usage_flow_msg{
@@ -506,13 +506,50 @@ p, h3, h4, b{
   }
 }
 .usage_flow_support_msg{
-  color: #16B0EA;
-    border: 1px solid #16B0EA;
-    text-align: center;
-    padding: 1.5rem 5rem;
-    width: 93%;
-    margin: 0 auto;
-    margin-top: 1rem;
-    border-radius: 1rem;
+  color: $sub-blue-main-color;
+  border: 1px solid $sub-blue-main-color;
+  text-align: center;
+  padding: 1.5rem 5rem;
+  width: 93%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
 // ご利用までの流れ
+
+// よくある問い合せ
+.section_title{
+  margin-top: 10rem;
+}
+.faq_lists_item{
+  display: flex;
+  flex-direction: column;
+  .faq_common{
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+    .faq_q_img{
+      width: 5rem;
+      height: 5rem;
+      margin-right: 4rem;
+    }
+  }
+  .faq_question_msg{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .faq_top{
+    background: #2a65ca;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 3rem;
+  }
+  .faq_under{
+    background: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 1px solid #2a65ca;
+  }
+}
+// よくある問い合せ

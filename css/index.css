@@ -513,4 +513,40 @@ p, h3, h4, b {
   margin: 0 auto;
   margin-top: 1rem;
   border-radius: 1rem;
+}
+
+.section_title {
+  margin-top: 10rem;
+}
+
+.faq_lists_item {
+  display: flex;
+  flex-direction: column;
+}
+.faq_lists_item .faq_common {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+.faq_lists_item .faq_common .faq_q_img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 4rem;
+}
+.faq_lists_item .faq_question_msg {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.faq_lists_item .faq_top {
+  background: #2a65ca;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 3rem;
+}
+.faq_lists_item .faq_under {
+  background: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 1px solid #2a65ca;
 }/*# sourceMappingURL=index.css.map */
