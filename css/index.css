@@ -121,7 +121,7 @@ h1 {
   margin-top: 0.5rem;
 }
 
-p, h3 {
+p, h3, h4, b {
   color: #4B4B4B;
 }
 
@@ -305,4 +305,125 @@ p, h3 {
 }
 .blast_about_content .blast_about_right {
   width: 35%;
+}
+
+.blast_three_features {
+  margin-top: 15rem;
+}
+
+.blast_three_feature_lists {
+  margin-top: 3rem;
+  background: #F5FCFF;
+  border: 1px solid #E0E0E0;
+  padding: 3rem 11rem;
+  border-radius: 1rem;
+}
+
+.blast_three_feature_items_title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #16B0EA;
+}
+.blast_three_feature_items_title span {
+  font-size: 5rem;
+}
+
+.blast_three_feature_items_sub_title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.blast_three_feature_items_msg {
+  line-height: 2.5rem;
+}
+
+.table_container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 4rem auto 0 auto;
+  border-collapse: collapse;
+}
+
+.table_header {
+  background-color: #2A65CA;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.table_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+
+.table_row:first-child {
+  border: 1px solid #ccc;
+}
+
+.table_row:not(:first-child) {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.table_row:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.table_cell {
+  flex: 1;
+  text-align: left;
+}
+
+.arrow_cell {
+  flex: 0;
+  text-align: right;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  width: 100%;
+}
+
+.content_inner {
+  padding: 2rem;
+  background-color: rgb(248, 248, 248);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.content_inner p {
+  margin: 0 0 10px 0;
+}
+.content_inner p span {
+  font-weight: bold;
+}
+.content_inner p:last-child {
+  margin-bottom: 0;
+}
+
+.second_features_msg, .three_features_msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.second_features_msg p, .three_features_msg p {
+  width: 67%;
+  line-height: 3rem;
+}
+.second_features_msg .second_features_img, .second_features_msg .three_features_img, .three_features_msg .second_features_img, .three_features_msg .three_features_img {
+  width: 20rem;
+  height: 30%;
 }/*# sourceMappingURL=index.css.map */
