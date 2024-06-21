@@ -94,34 +94,43 @@ h1{
   font-size: 3rem;
 }
 .section_title{
-  font-weight: bold;
-  font-size: 3rem;
-  color: #2A65CA;
-  letter-spacing: 0.06em;
-  position: relative;
-  width: fit-content;
   margin: 0 auto;
-  padding-bottom: 0.7rem;
-  h2::after{
-    background-color: $blue-main-color;
-    bottom: 0;
-    content: "";
-    height: 4px;
-    left: 50%;
-    position: absolute;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-100%);
-    width: 50%;
+  width: fit-content;
+  h2{
+    font-weight: bold;
+    font-size: 3rem;
+    color: #2A65CA;
+    letter-spacing: 0.06em;
+    position: relative;
+    padding-bottom: 0.7rem;
+    &::after{
+      background-color: $blue-main-color;
+      bottom: 0;
+      content: "";
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-100%);
+      width: 50%;
+    }
+    &::before{
+      background-color: $sub-blue-main-color;
+      bottom: 0;
+      content: "";
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      width: 50%;
+    }
   }
-  h2::before{
-    background-color: $sub-blue-main-color;
-    bottom: 0;
-    content: "";
-    height: 4px;
-    left: 50%;
-    position: absolute;
-    width: 50%;
+  p{
+    font-size: 1rem;
+    margin-top: 0.5rem;
   }
+}
+p, h3{
+  color: $black-main-color;
 }
 /* 共通パーツ */
 
@@ -157,7 +166,6 @@ h1{
   .left_visual{
     width: 57%;
     h3{
-      color: $black-main-color;
       font-size: 3.7rem;
       font-weight: bold;
       margin: 4rem 0 2rem 0;
@@ -165,7 +173,6 @@ h1{
     p{
       font-size: 2rem;
       font-weight: bold;
-      color: $black-main-color;
       padding-left: 2rem;
     }
     .free_consultation{
@@ -286,3 +293,24 @@ h1{
   right: -6rem;
 }
 // mail_visual
+
+// コミュスタ BLASTとは
+.blast_about{
+  margin-top: 10rem;
+}
+.blast_about_content{
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  .blast_about_left{
+    width: 60%;
+    padding-top: 5rem;
+    p{
+      line-height: 2.7rem;
+    }
+  }
+  .blast_about_right{
+    width: 35%;
+  }
+}
+// コミュスタ BLASTとは
