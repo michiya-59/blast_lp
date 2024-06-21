@@ -308,14 +308,14 @@ p, h3, h4, b {
 }
 
 .blast_three_features {
-  margin-top: 15rem;
+  margin-top: 13rem;
 }
 
 .blast_three_feature_lists {
   margin-top: 3rem;
   background: #F5FCFF;
   border: 1px solid #E0E0E0;
-  padding: 3rem 11rem;
+  padding: 3rem 9rem;
   border-radius: 1rem;
 }
 
@@ -426,4 +426,44 @@ p, h3, h4, b {
 .second_features_msg .second_features_img, .second_features_msg .three_features_img, .three_features_msg .second_features_img, .three_features_msg .three_features_img {
   width: 20rem;
   height: 30%;
+}
+
+.study_vocies {
+  margin-top: 13rem;
+}
+
+.study_voices_lists {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.study_voices_lists .study_voices_item {
+  border: 3px solid #2A65CA;
+  position: relative;
+  padding: 4rem 3rem 2.5rem 3rem;
+  width: 48%;
+  margin-top: 6rem;
+}
+.study_voices_lists .study_voices_item span {
+  position: absolute;
+  color: white;
+  background: #2a65ca;
+  padding: 1rem 5rem;
+  font-weight: bold;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  font-size: 2.5rem;
+  font-family: serif;
+}
+
+.voice_user {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #2a65ca;
+  margin-bottom: 2rem;
+}
+
+.voice_user_message {
+  line-height: 2.6rem;
 }/*# sourceMappingURL=index.css.map */
