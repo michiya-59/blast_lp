@@ -100,10 +100,13 @@ h1{
   h2{
     font-weight: bold;
     font-size: 3rem;
-    color: #2A65CA;
+    color: $blue-main-color;
     letter-spacing: 0.06em;
     position: relative;
     padding-bottom: 0.7rem;
+    @include responsive_media(sp){
+      font-size: 2.2rem;
+    }
     &::after{
       background-color: $blue-main-color;
       bottom: 0;
@@ -140,9 +143,20 @@ p, h3, h4, b{
 .top_header{
   border-bottom: 1px solid #F1F1F1;
   font-size: 1.3rem;
+  @include responsive_media(sp){
+    font-size: 1rem;
+  }
 }
 .header{
   border-bottom: 1px solid #E3E3E3;
+  .header_left{
+    @include responsive_media(sp){
+      align-self: center;
+      h1{
+        font-size: 2.5rem;
+      }
+    }
+  }
   .header_right{
     align-self: center;
     color: white;
@@ -164,8 +178,15 @@ p, h3, h4, b{
 .top_visual{
   padding-top: 6rem;
   display: flex;
+  @include responsive_media(sp){
+    flex-direction: column;
+    padding-top: 4rem;
+  }
   .left_visual{
     width: 57%;
+    @include responsive_media(sp){
+      width: 100%;
+    }
     h3{
       font-size: 3.7rem;
       font-weight: bold;
@@ -181,8 +202,12 @@ p, h3, h4, b{
       background: $blue-main-color;
       color: white;
       padding: 1rem;
-      margin: 3rem 0 3rem 9rem;
+      margin: 6rem 0 3rem 9rem;
       border-radius: 4rem;
+      @include responsive_media(sp){
+        width: 40rem;
+        margin: 5rem auto;
+      }
     }
     .consultation_sub_msg{
       color: #fff;
@@ -219,6 +244,9 @@ p, h3, h4, b{
         top: 6px;
         width: 10px;
       }
+      @include responsive_media(sp){
+        font-size: 1.5rem;
+      }
     }
     .consultation_main_msg{
       color: #fff;
@@ -230,10 +258,17 @@ p, h3, h4, b{
       line-height: 150%;
       text-align: center;
       width: 100%;
+      @include responsive_media(sp){
+        font-size: 2rem;
+      }
     }
   }
   .right_visual{
     width: 43%;
+    @include responsive_media(sp){
+      width: 85%;
+      margin: 0 auto;
+    }
   }
 }
 .under_visual{
@@ -242,13 +277,36 @@ p, h3, h4, b{
   .choose_three_reason{
     padding: 5rem 14rem;
     margin-top: 6rem;
+    @include responsive_media(sp){
+      padding: 2rem 2.5rem;
+    }
     .choose_lists{
       display: flex;
       justify-content: space-between;
       margin-top: 5rem;
+      @include responsive_media(sp){
+        flex-direction: column;
+      }
       .choose_lists_item{
         position: relative;
         width: calc(33.33333333% - 30px);
+        @include responsive_media(sp){
+          width: 100%;
+          display: flex;
+          margin-bottom: 4rem;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &:first-child{
+            span{
+              left: -4px;
+              top: -0.8rem;
+            }
+            .choose_lists_item_img{
+              width: 33%;
+            }
+          }
+        }
         span{
           color: #1999d1;
           font-size: 3.5rem;
@@ -258,11 +316,25 @@ p, h3, h4, b{
           line-height: 5.2rem;
           position: absolute;
           top: -2.8rem;
+          @include responsive_media(sp){
+            left: -5px;
+            top: -4rem;
+          }
         }
         .choose_lists_item_img{
           margin: 0 auto;
           width: 18rem;
           height: 18rem;
+          @include responsive_media(sp){
+            width: 35%;
+            margin-left: 0;
+            height: auto;
+          }
+        }
+        .choose_lists_item_part{
+          @include responsive_media(sp){
+            width: 55%;
+          }
         }
         .choose_lists_item_title{
           font-size: 2rem;
@@ -272,6 +344,9 @@ p, h3, h4, b{
           line-height: 1.5;
           margin-top: 1rem;
           text-align: center;
+          @include responsive_media(sp){
+            font-size: 2rem;
+          }
         }
         .choose_lists_item_msg{
           font-size: 1.5rem;
@@ -280,6 +355,9 @@ p, h3, h4, b{
           letter-spacing: .06em;
           line-height: 2rem;
           margin-top: 1rem;
+          @include responsive_media(sp){
+            font-size: 1.8rem;
+          }
         }
       }
     }
@@ -292,26 +370,49 @@ p, h3, h4, b{
   width: 58rem;
   height: 58rem;
   right: -6rem;
+  @include responsive_media(sp){
+    width: 32rem;
+    height: 32rem;
+    top: 11rem;
+    right: -4rem;
+  }
 }
 // mail_visual
 
 // コミュスタ BLASTとは
-.blast_about{
+.blast_about, .blast_three_features, .study_vocies, .usage_flow, .faq, .finish_msg{
   margin-top: 10rem;
+  @include responsive_media(sp){
+    margin-top: 8rem !important;
+  }
 }
 .blast_about_content{
   display: flex;
   margin-top: 1rem;
   justify-content: space-between;
+  @include responsive_media(sp){
+    flex-direction: column-reverse;
+  }
   .blast_about_left{
     width: 60%;
     padding-top: 5rem;
+    @include responsive_media(sp){
+      width: 100%;
+      padding-top: 3rem;
+      p{
+        font-size: 2rem;
+      }
+    }
     p{
       line-height: 2.7rem;
     }
   }
   .blast_about_right{
     width: 35%;
+    @include responsive_media(sp){
+      width: 55%;
+      margin: 3rem auto 0 auto;
+    }
   }
 }
 // コミュスタ BLASTとは
@@ -326,6 +427,9 @@ p, h3, h4, b{
   border: 1px solid #E0E0E0;
   padding: 3rem 9rem;
   border-radius: 1rem;
+  @include responsive_media(sp){
+    padding: 2rem 2rem;
+  }
 }
 .blast_three_feature_items_title{
   text-align: center;
@@ -341,9 +445,17 @@ p, h3, h4, b{
   font-size: 2.5rem;
   text-align: center;
   margin: 3rem 0;
+  @include responsive_media(sp){
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.3rem;
+  }
 }
 .blast_three_feature_items_msg{
   line-height: 2.5rem;
+  @include responsive_media(sp){
+    font-size: 2rem;
+  }
 }
 
 // １つ目の特徴
@@ -352,6 +464,9 @@ p, h3, h4, b{
   max-width: 80rem;
   margin: 4rem auto 0 auto;
   border-collapse: collapse;
+  @include responsive_media(sp){
+    font-size: 2rem;
+  }
 }
 .table_header {
   background-color: $blue-main-color;
@@ -359,6 +474,9 @@ p, h3, h4, b{
   text-align: center;
   padding: 1rem;
   font-size: 1.8rem;
+  @include responsive_media(sp){
+    font-size: 2rem;
+  }
 }
 .table_row {
   display: flex;
@@ -368,6 +486,9 @@ p, h3, h4, b{
   cursor: pointer;
   position: relative;
   background: white;
+  @include responsive_media(sp){
+    padding: 1.5rem;
+  }
 }
 .table_row:first-child {
   border: 1px solid #ccc;
@@ -418,13 +539,22 @@ p, h3, h4, b{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include responsive_media(sp){
+    flex-direction: column-reverse;
+  }
   p{
     width: 67%;
     line-height: 3rem;
+    @include responsive_media(sp){
+      width: 100%;
+    }
   }
   .second_features_img, .three_features_img{
     width: 20rem;
     height: 30%;
+    @include responsive_media(sp){
+      margin-bottom: 3rem;
+    }
   }
 }
 // 二つ目の特徴, 三つ目の特徴
@@ -440,16 +570,23 @@ p, h3, h4, b{
   margin-top: 3rem;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include responsive_media(sp){
+    flex-direction: column;
+    margin-top: 0;
+  }
   .study_voices_item{
-    border: 3px solid #2A65CA;
+    border: 3px solid $blue-main-color;
     position: relative;
     padding: 4rem 3rem 2.5rem 3rem;
     width: 48%;
     margin-top: 6rem;
+    @include responsive_media(sp){
+      width: 100%;
+    }
     span{
       position: absolute;
       color: white;
-      background: #2a65ca;
+      background: $blue-main-color;
       padding: 1rem 5rem;
       font-weight: bold;
       left: 50%;
@@ -462,7 +599,7 @@ p, h3, h4, b{
 .voice_user{
   font-weight: bold;
   font-size: 2rem;
-  color: #2a65ca;
+  color: $blue-main-color;
   margin-bottom: 2rem;
 }
 .voice_user_message{
@@ -478,11 +615,19 @@ p, h3, h4, b{
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  @include responsive_media(sp){
+    flex-direction: column;
+  }
   .usage_flow_item{
     padding: 2.6rem 7.5rem;
     border: 3px solid $sub-blue-main-color;
     border-radius: 1rem;
     text-align: center;
+    @include responsive_media(sp){
+      width: 85%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
     .usage_flow_title{
       font-size: 3rem;
       font-weight: bold;
@@ -497,12 +642,18 @@ p, h3, h4, b{
     .usage_flow_img{
       width: 10rem;
       height: 10rem;
+      @include responsive_media(sp){
+        margin: 0 auto;
+      }
     }
   }
   .usage_flow_arrow_img{
     margin: 0 3rem;
     width: 5rem;
     align-self: center;
+    @include responsive_media(sp){
+      transform: rotate(90deg);
+    }
   }
 }
 .usage_flow_support_msg{
@@ -514,11 +665,15 @@ p, h3, h4, b{
   margin: 0 auto;
   margin-top: 1rem;
   border-radius: 1rem;
+  @include responsive_media(sp){
+    width: 85%;
+    padding: 1rem 2rem;
+  }
 }
 // ご利用までの流れ
 
 // よくある問い合せ
-.section_title{
+.faq{
   margin-top: 10rem;
 }
 .faq_lists_item{
@@ -528,19 +683,31 @@ p, h3, h4, b{
     display: flex;
     align-items: center;
     padding: 2rem 4rem;
+    @include responsive_media(sp){
+      padding: 2rem 3rem;
+    }
     .faq_q_img{
       width: 5rem;
       height: 5rem;
       margin-right: 4rem;
+      @include responsive_media(sp){
+        width: 14%;
+        margin-right: 2rem;
+        height: auto;
+      }
     }
   }
   .faq_question_msg{
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    @include responsive_media(sp){
+      font-size: 1.8rem;
+      width: 86%;
+    }
   }
   .faq_top{
-    background: #2a65ca;
+    background: $blue-main-color;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     margin-top: 3rem;
@@ -549,7 +716,47 @@ p, h3, h4, b{
     background: white;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    border: 1px solid #2a65ca;
+    border: 1px solid $blue-main-color;
+    @include responsive_media(sp){
+      .faq_q_img{
+        width: 14%;
+        margin-right: 2rem;
+      }
+    }
   }
 }
+.faq_answer_msg{
+  width: 86%;
+}
 // よくある問い合せ
+
+// 最後に
+.finish_msg{
+  margin-top: 10rem;
+}
+.finish_msg_content{
+  background: $blue-opacity-main-color;
+  margin-top: 3rem;
+  .msg{
+    padding: 6rem 0;
+    line-height: 2.5rem;
+    @include responsive_media(sp){
+      font-size: 2rem;
+    }
+  }
+}
+// 最後に
+
+// footer
+.footer{
+  background-color: $blue-main-color;
+  p{
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    @include responsive_media(sp){
+      font-size: 1.4rem;
+    }
+  }
+}
+// footer
