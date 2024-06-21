@@ -1,0 +1,280 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /* 1rem → 10px */
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 50%; /* 1rem → 8px */
+  }
+}
+body {
+  font-size: 1.6rem;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/*横幅900のひろいやつ*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 6.2rem;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+    padding: 0;
+  }
+}
+/*横幅660のせまいやつ*/
+.container-660 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 66rem;
+}
+
+@media (max-width: 1000px) {
+  .container-660 {
+    width: 90%;
+    padding: 0;
+  }
+}
+/*横幅800のやつ*/
+.container-800 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 90rem; /*ここを変える*/
+}
+
+@media (max-width: 1000px) {
+  .container-800 {
+    width: 90%;
+    padding: 0;
+  }
+}
+/* 共通パーツ */
+.common_header {
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #2A65CA;
+  font-size: 3rem;
+}
+
+.section_title {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #2A65CA;
+  letter-spacing: 0.06em;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 0.7rem;
+}
+.section_title h2::after {
+  background-color: #2A65CA;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-100%);
+  width: 50%;
+}
+.section_title h2::before {
+  background-color: #16B0EA;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  width: 50%;
+}
+
+/* 共通パーツ */
+/* header */
+.top_header {
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 1.3rem;
+}
+
+.header {
+  border-bottom: 1px solid #E3E3E3;
+}
+.header .header_right {
+  align-self: center;
+  color: white;
+  background: #2A65CA;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+}
+
+/* header */
+.mail_visual {
+  background: #F5FCFF;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 6rem;
+}
+
+.top_visual {
+  padding-top: 6rem;
+  display: flex;
+}
+.top_visual .left_visual {
+  width: 57%;
+}
+.top_visual .left_visual h3 {
+  color: #4B4B4B;
+  font-size: 3.7rem;
+  font-weight: bold;
+  margin: 4rem 0 2rem 0;
+}
+.top_visual .left_visual p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4B4B4B;
+  padding-left: 2rem;
+}
+.top_visual .left_visual .free_consultation {
+  width: 30rem;
+  background: #2A65CA;
+  color: white;
+  padding: 1rem;
+  margin: 3rem 0 3rem 9rem;
+  border-radius: 4rem;
+}
+.top_visual .left_visual .consultation_sub_msg {
+  color: #fff;
+  display: table;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 150%;
+  margin: 0 auto;
+  padding: 0 18px;
+  position: relative;
+}
+.top_visual .left_visual .consultation_sub_msg::before {
+  background-image: url(../img/left_line.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 10px;
+}
+.top_visual .left_visual .consultation_sub_msg::after {
+  background-image: url(../img/right_line.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  width: 10px;
+}
+.top_visual .left_visual .consultation_main_msg {
+  color: #fff;
+  display: block;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 150%;
+  text-align: center;
+  width: 100%;
+}
+.top_visual .right_visual {
+  width: 43%;
+}
+
+.under_visual {
+  background: white;
+  box-shadow: 2px 2px 6px 1px #c7c7c7;
+}
+.under_visual .choose_three_reason {
+  padding: 5rem 14rem;
+  margin-top: 6rem;
+}
+.under_visual .choose_three_reason .choose_lists {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.under_visual .choose_three_reason .choose_lists .choose_lists_item {
+  position: relative;
+  width: calc(33.33333333% - 30px);
+}
+.under_visual .choose_three_reason .choose_lists .choose_lists_item span {
+  color: #1999d1;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  left: 4px;
+  line-height: 5.2rem;
+  position: absolute;
+  top: -2.8rem;
+}
+.under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_img {
+  margin: 0 auto;
+  width: 18rem;
+  height: 18rem;
+}
+.under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin-top: 1rem;
+  text-align: center;
+}
+.under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_msg {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  top: 3rem;
+  width: 58rem;
+  height: 58rem;
+  right: -6rem;
+}/*# sourceMappingURL=index.css.map */
