@@ -101,6 +101,11 @@ h1 {
     font-size: 2.2rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .section_title h2 {
+    font-size: 1.8rem;
+  }
+}
 .section_title h2::after {
   background-color: #2A65CA;
   bottom: 0;
@@ -153,6 +158,11 @@ p, h3, h4, b {
     font-size: 2.5rem;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 320px) {
+  .header .header_left h1 {
+    font-size: 2rem;
+  }
+}
 .header .header_right {
   align-self: center;
   color: white;
@@ -160,6 +170,11 @@ p, h3, h4, b {
   padding: 1rem 2rem;
   font-size: 1.4rem;
   border-radius: 2rem;
+}
+@media screen and (max-width: 320px) {
+  .header .header_right {
+    font-size: 1.2rem;
+  }
 }
 
 /* header */
@@ -193,10 +208,25 @@ p, h3, h4, b {
   font-weight: bold;
   margin: 4rem 0 2rem 0;
 }
+@media screen and (max-width: 375px) {
+  .top_visual .left_visual h3 {
+    font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .top_visual .left_visual h3 {
+    font-size: 3rem;
+  }
+}
 .top_visual .left_visual p {
   font-size: 2rem;
   font-weight: bold;
   padding-left: 2rem;
+}
+@media screen and (max-width: 320px) {
+  .top_visual .left_visual p {
+    font-size: 1.7rem;
+  }
 }
 .top_visual .left_visual .free_consultation {
   width: 30rem;
@@ -210,6 +240,12 @@ p, h3, h4, b {
   .top_visual .left_visual .free_consultation {
     width: 40rem;
     margin: 5rem auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .top_visual .left_visual .free_consultation {
+    margin: 3rem auto;
+    width: 100%;
   }
 }
 .top_visual .left_visual .consultation_sub_msg {
@@ -370,6 +406,11 @@ p, h3, h4, b {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 375px) {
+  .under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_title {
+    font-size: 1.8rem;
+  }
+}
 .under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_msg {
   font-size: 1.5rem;
   font-style: normal;
@@ -381,6 +422,16 @@ p, h3, h4, b {
 @media screen and (max-width: 767px) {
   .under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_msg {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_msg {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .under_visual .choose_three_reason .choose_lists .choose_lists_item .choose_lists_item_msg {
+    font-size: 1.4rem;
   }
 }
 
@@ -484,6 +535,11 @@ p, h3, h4, b {
     text-align: center;
     margin-top: 2rem;
     font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .blast_three_feature_items_sub_title {
+    font-size: 2.2rem;
   }
 }
 
@@ -652,6 +708,21 @@ p, h3, h4, b {
   transform: translate(-50%, -150%);
   font-size: 2.5rem;
   font-family: serif;
+}
+@media screen and (max-width: 820px) {
+  .study_voices_lists .study_voices_item span {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .study_voices_lists .study_voices_item span {
+    padding: 1rem 4rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .study_voices_lists .study_voices_item span {
+    padding: 1rem 3rem;
+  }
 }
 
 .voice_user {

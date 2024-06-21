@@ -107,6 +107,9 @@ h1{
     @include responsive_media(sp){
       font-size: 2.2rem;
     }
+    @include responsive_media(sp){
+      font-size: 1.8rem;
+    }
     &::after{
       background-color: $blue-main-color;
       bottom: 0;
@@ -154,6 +157,9 @@ p, h3, h4, b{
       align-self: center;
       h1{
         font-size: 2.5rem;
+        @include responsive_media(sp_320){
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -164,6 +170,9 @@ p, h3, h4, b{
     padding: 1rem 2rem;
     font-size: 1.4rem;
     border-radius: 2rem;
+    @include responsive_media(sp_320){
+      font-size: 1.2rem;
+    }
   }
 }
 /* header */
@@ -191,11 +200,20 @@ p, h3, h4, b{
       font-size: 3.7rem;
       font-weight: bold;
       margin: 4rem 0 2rem 0;
+      @include responsive_media(sp_375){
+        font-size: 3.6rem;
+      }
+      @include responsive_media(sp_320){
+        font-size: 3rem;
+      }
     }
     p{
       font-size: 2rem;
       font-weight: bold;
       padding-left: 2rem;
+      @include responsive_media(sp_320){
+        font-size: 1.7rem;
+      }
     }
     .free_consultation{
       width: 30rem;
@@ -207,6 +225,10 @@ p, h3, h4, b{
       @include responsive_media(sp){
         width: 40rem;
         margin: 5rem auto;
+      }
+      @include responsive_media(sp_320){
+        margin: 3rem auto;
+        width: 100%;
       }
     }
     .consultation_sub_msg{
@@ -347,6 +369,9 @@ p, h3, h4, b{
           @include responsive_media(sp){
             font-size: 2rem;
           }
+          @include responsive_media(sp_375){
+            font-size: 1.8rem;
+          }
         }
         .choose_lists_item_msg{
           font-size: 1.5rem;
@@ -357,6 +382,12 @@ p, h3, h4, b{
           margin-top: 1rem;
           @include responsive_media(sp){
             font-size: 1.8rem;
+          }
+          @include responsive_media(sp_375){
+            font-size: 1.7rem;
+          }
+          @include responsive_media(sp_320){
+            font-size: 1.4rem;
           }
         }
       }
@@ -449,6 +480,9 @@ p, h3, h4, b{
     text-align: center;
     margin-top: 2rem;
     font-size: 2.3rem;
+  }
+  @include responsive_media(sp_375){
+    font-size: 2.2rem;
   }
 }
 .blast_three_feature_items_msg{
@@ -593,6 +627,15 @@ p, h3, h4, b{
       transform: translate(-50%, -150%);
       font-size: 2.5rem;
       font-family: serif;
+      @include responsive_media(tab_820){
+        font-size: 2.3rem;
+      }
+      @include responsive_media(sp_375){
+        padding: 1rem 4rem;
+      }
+      @include responsive_media(sp_320){
+        padding: 1rem 3rem;
+      }
     }
   }
 }
