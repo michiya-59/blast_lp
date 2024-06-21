@@ -308,7 +308,7 @@ p, h3, h4, b {
 }
 
 .blast_three_features {
-  margin-top: 13rem;
+  margin-top: 10rem;
 }
 
 .blast_three_feature_lists {
@@ -429,7 +429,7 @@ p, h3, h4, b {
 }
 
 .study_vocies {
-  margin-top: 13rem;
+  margin-top: 10rem;
 }
 
 .study_voices_lists {
@@ -466,4 +466,51 @@ p, h3, h4, b {
 
 .voice_user_message {
   line-height: 2.6rem;
+}
+
+.usage_flow {
+  margin-top: 10rem;
+}
+
+.usage_flow_list {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.usage_flow_list .usage_flow_item {
+  padding: 2.6rem 7.5rem;
+  border: 3px solid #16B0EA;
+  border-radius: 1rem;
+  text-align: center;
+}
+.usage_flow_list .usage_flow_item .usage_flow_title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #16B0EA;
+  margin-bottom: 2rem;
+}
+.usage_flow_list .usage_flow_item .usage_flow_msg {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.usage_flow_list .usage_flow_item .usage_flow_img {
+  width: 10rem;
+  height: 10rem;
+}
+.usage_flow_list .usage_flow_arrow_img {
+  margin: 0 3rem;
+  width: 5rem;
+  align-self: center;
+}
+
+.usage_flow_support_msg {
+  color: #16B0EA;
+  border: 1px solid #16B0EA;
+  text-align: center;
+  padding: 1.5rem 5rem;
+  width: 93%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }/*# sourceMappingURL=index.css.map */
