@@ -7,187 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>授業内容の詳細</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .table-container {
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-            border-collapse: collapse;
-        }
-        .table-header {
-            background-color: #2a73cc;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 18px;
-        }
-        .table-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            cursor: pointer;
-            position: relative;
-        }
-        .table-row:first-child {
-            border: 1px solid #ccc;
-        }
-        .table-row:not(:first-child) {
-          border-right: 1px solid #ccc;
-          border-bottom: 1px solid #ccc;
-          border-left: 1px solid #ccc;
-        }
-        .table-row:nth-child(odd) {
-            background-color: #f9f9f9;
-        }
-        .table-cell {
-            flex: 1;
-            text-align: left;
-        }
-        .arrow-cell {
-            flex: 0;
-            text-align: right;
-        }
-        .content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out;
-            width: 100%;
-        }
-        .content-inner {
-          padding: 20px;
-          background-color: #cecece30;
-          border-top: 1px solid #ccc;
-          border-right: 1px solid lightgray;
-          border-left: 1px solid lightgray;
-        }
-        .content-inner p{
-          margin: 0 0 10px 0;
-        }
-        .content-inner p span{
-          font-weight: bold;
-        }
+        .contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group .required {
+    color: #f16a6a;
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 10px);
+    padding: 8px 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #bbb;
+}
+
+.submit-button:active {
+    background-color: #999;
+}
     </style>
 </head>
 <body>
-    <div class="table-container">
-        <div class="table-header">授業内容の詳細</div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">1. 株式投資</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p><span>レッスン1</span>： 株式の仕組み</p>
-                <p><span>レッスン2</span>： 株式の注文方法</p>
-                <p><span>レッスン3</span>： 配当金</p>
-                <p><span>レッスン4</span>： 決算書を見る利点</p>
-                <p><span>レッスン5</span>： 株価の変動要因</p>
-                <p><span>レッスン6</span>： 財務諸表を読む利点</p>
-                <p><span>レッスン7</span>： 財務諸表の分析法</p>
-                <p><span>レッスン8</span>： 株価が上がるタイミング</p>
-                <p><span>レッスン9</span>： テクニカル分析概要</p>
-                <p><span>レッスン10</span>： テクニカル分析法</p>
-                <p><span>レッスン11</span>： リスク管理</p>
-            </div>
-        </div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">2. 為替取引</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p><span>レッスン1</span>： 投資について</p>
-                <p><span>レッスン2</span>： デリバティブ取引とは</p>
-                <p><span>レッスン3</span>： デリバティブ取引の種類</p>
-                <p><span>レッスン4</span>： 為替とは</p>
-                <p><span>レッスン5</span>： 為替相場が動く訳</p>
-                <p><span>レッスン6</span>： 為替取引を行うための知識</p>
-                <p><span>レッスン7</span>： ボリンジャーバンド、レンジトレンドについて</p>
-                <p><span>レッスン8</span>： テクニカル分析</p>
-                <p><span>レッスン9</span>： ファンダメンタル分析</p>
-                <p><span>レッスン10</span>： 総まとめ</p>
-            </div>
-        </div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">3. 保険</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p>🧑‍🏫保険</p>
-                <p><span>レッスン1</span>： 保険ってどんなもの</p>
-                <p><span>レッスン2</span>： なぜ保険は必要なのか？</p>
-                <p><span>レッスン3</span>： 保険にはどんな種類があるのか？</p>
-                <p><span>レッスン4</span>： 保険って貯蓄じゃだめなの？</p>
-                <p><span>レッスン5</span>： 保険料と配当金の仕組み</p>
-                <p><span>レッスン6</span>： 保険会社って何をしているの？</p>
-                <p><span>レッスン7</span>： 保険商品の見方とは？</p>
-                <p><span>レッスン8</span>： 自分に合った保険会社の選び方・見直しのコツ</p>
-                <p><span>レッスン9</span>： 保険に関わる税金</p>
-                <p><span>レッスン10</span>： 保険をもう一度振り返ってみよう</p>
-            </div>
-        </div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">4. 不動産投資</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p>🧑‍🏫投資用不動産</p>
-                <p><span>レッスン1</span>： 不動産の基本</p>
-                <p><span>レッスン2</span>： 不動産のメリット・デメリット</p>
-                <p><span>レッスン3</span>： 不動産にかかるお金と融資の受け方</p>
-                <p><span>レッスン4</span>： 物件の良し悪しの見分け方</p>
-                <p><span>レッスン5</span>： 改めて不動産投資で得られるものとは？</p>
-                <p><span>レッスン6</span>： 信頼できる不動産会社の見極め方</p>
-                <p><span>レッスン7</span>： 物件管理について</p>
-                <p><span>レッスン8</span>： 不動産投資の出口戦略</p>
-                <p><span>レッスン9</span>： アーリーリタイアをするためには</p>
-                <p><span>レッスン10</span>： 不動産投資の始め方・手順</p>
-            </div>
-        </div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">5. 投資信託</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p>🧑‍🏫投資信託</p>
-                <p><span>レッスン1</span>： NISAとは</p>
-                <p><span>レッスン2</span>： おすすめの証券口座</p>
-                <p><span>レッスン3</span>： 銘柄選びとメリットとリスク</p>
-            </div>
-        </div>
-        <div class="table-row" onclick="toggleContent(this)">
-            <div class="table-cell">6. 動画編集</div>
-            <div class="arrow-cell">∨</div>
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <p>🧑‍🏫動画編集</p>
-                <p><span>レッスン1</span>： 動画編集とは</p>
-                <p><span>レッスン2</span>： カット、テロップ入れ</p>
-                <p><span>レッスン3</span>： カットテロップ実践編</p>
-                <p><span>レッスン4</span>： エフェクトBGM</p>
-                <p><span>レッスン5</span>： 著作権</p>
-                <p><span>レッスン6</span>： サンプル動画制作</p>
-                <p><span>レッスン7</span>： サンプル動画制作</p>
-            </div>
-        </div>
+  <form class="contact-form">
+    <div class="form-group">
+        <label for="name">お名前 <span class="required">必須</span></label>
+        <input type="text" id="name" name="name" required>
     </div>
-
-    <script>
-        function toggleContent(element) {
-            const content = element.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        }
-    </script>
+    <div class="form-group">
+        <label for="email">メールアドレス <span class="required">必須</span></label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">電話番号 <span class="required">必須</span></label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="course">気になるコース <span class="required">必須</span></label>
+        <select id="course" name="course" required>
+            <option value="normal">ノーマルコース</option>
+            <option value="advanced">アドバンスコース</option>
+            <option value="expert">エキスパートコース</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">お問い合わせ内容（簡単に内容をご記入ください。） <span class="required">必須</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">問い合せをする</button>
+</form>
 </body>
 </html>

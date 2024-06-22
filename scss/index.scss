@@ -803,3 +803,182 @@ p, h3, h4, b{
   }
 }
 // footer
+
+// お問い合わせフォーム
+.contact_header{
+  background: #16B0EA;
+  text-align: center;
+  padding: 6rem 0;
+  h1{
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.contact_form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+
+  .form_group {
+    margin-bottom: 2rem;
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      font-size: 1.4rem;
+      @include responsive_media(sp_375){
+        font-size: 1.3rem;
+      }
+      .required {
+        color: white;
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        background: #f16a6a;
+        padding: 0.3rem 1.5rem;
+        border-radius: 6px;
+        font-weight: normal;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      width: calc(100% - 10px);
+      padding: 0.8rem 0.5rem;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+        border-color: darken(#ccc, 10%);
+      }
+    }
+
+    select {
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  @include responsive_media(sp_320){
+    &:last-child{
+      label span{
+        margin-top: 0.5rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  .submit_button {
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: #2a65ca;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 8rem;
+    border-radius: 2rem;
+
+    &:hover {
+      background-color: #bbb;
+    }
+
+    &:active {
+      background-color: #999;
+    }
+  }
+}
+.pankuzu_menu{
+  display: flex;
+  color: #18b0ea;
+  font-weight: bold;
+  margin: 2rem 0px 5rem 0;
+  font-size: 1.4rem;
+  span{
+    margin: 0 0.5rem;
+  }
+}
+.contact_container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+  @include responsive_media(sp){
+    margin-bottom: 3rem;
+    flex-direction: column;
+  }
+  .contact_left{
+    width: 50%;
+    height: 50%;
+    padding: 4rem 5rem;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .15);
+    border-radius: 1rem;
+    margin-right: 1rem;
+    @include responsive_media(sp){
+      width: 100%;
+      padding: 3rem;
+    }
+    .contact_support_msg{
+      h2{
+        color: #4B4B4B;
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        @include responsive_media(sp_320){
+          font-size: 2rem;
+        }
+      }
+      p{
+        font-size: 1.6rem;
+        letter-spacing: 0.3px;
+        margin-bottom: 1rem;
+      }
+      &:last-child{
+        font-size: 1.3rem;
+      }
+      .contact_content{
+        margin-top: 5rem;
+        padding: 3rem;
+        background: #F5FCFF;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .15);
+        border-radius: 1rem;
+        @include responsive_media(sp){
+          padding: 2rem;
+        }
+        h3{
+          color: #2A65CA;
+          font-weight: bold;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          @include responsive_media(sp_320){
+            font-size: 1.8rem;
+          }
+        }
+        p{
+          line-height: 2.5rem;
+          font-weight: bold;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .contact_right{
+    width: 45%;
+    @include responsive_media(sp){
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+}
+// お問い合わせフォーム
