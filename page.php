@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>  
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/menu_down.js" defer></script>
-  <title>コミュスタBLAST</title>
+  <?php get_header(); ?>
 </head>
 <body>
+  <?php
+    // メニューIDを取得
+    $menu_name = 'global_nav';
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+  ?>
   <header>
     <div class="common_header top_header">
       <p>お金の知識を高めるコミュニティ</p>
@@ -20,7 +22,9 @@
       </div>
 
       <div class="header_right">
-        <a href="contact.html" target="_blank">無料相談はこちら</a>
+        <?php foreach ($menu_items as $item): ?>
+          <a href="<?php echo $item->url; ?>" target="_blank"><?php echo $item->title; ?></a>
+        <?php endforeach; ?>
       </div>
     </div>
   </header>
@@ -92,5 +96,6 @@
       <p>Copyright ©︎ コミュスタBLAST all rights reserved.</p>
     </div>
   </footer>
+  <?php get_footer(); ?>
 </body>
 </html>

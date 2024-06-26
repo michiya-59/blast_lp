@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>  
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/menu_down.js" defer></script>
-  <title>コミュスタBLAST</title>
+  <?php get_header(); ?>
 </head>
 <body>
+  <?php
+    // メニューIDを取得
+    $menu_name = 'global_nav';
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+  ?>
   <header>
     <div class="common_header top_header">
       <p>お金の知識を高めるコミュニティ</p>
@@ -20,7 +22,9 @@
       </div>
 
       <div class="header_right">
-        <a href="contact.html" target="_blank">無料相談はこちら</a>
+        <?php foreach ($menu_items as $item): ?>
+          <a href="<?php echo $item->url; ?>" target="_blank"><?php echo $item->title; ?></a>
+        <?php endforeach; ?>
       </div>
     </div>
   </header>
@@ -33,15 +37,17 @@
             <h3>〜 人生の知識に彩りを 〜</h3>
             <p>お金の知識を高める<br>個人事業主又は事業者様限定のコミュニティ</p>
             <div class="free_consultation">
-              <a href="contact.html" class="consultation_btn">
-                <span class="consultation_sub_msg">簡単1分で完了</span>
-                <span class="consultation_main_msg">今すぐ無料で相談する</span>
-              </a>
+              <?php foreach ($menu_items as $item): ?>
+                <a href="<?php echo $item->url; ?>" class="consultation_btn">
+                  <span class="consultation_sub_msg">簡単1分で完了</span>
+                  <span class="consultation_main_msg">今すぐ無料で相談する</span>
+                </a>
+              <?php endforeach; ?>
             </div>
           </div>
 
           <div class="right_visual">
-            <img src="img/pc_mock.png" alt="システムのモック写真">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/pc_mock.png" alt="システムのモック写真">
           </div>
         </div>
 
@@ -55,7 +61,7 @@
               <li class="choose_lists_item">
                 <span>01</span>
                 <div class="choose_lists_item_img">
-                  <img src="img/study.png">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/study.png">
                 </div>
                 <div class="choose_lists_item_part">
                   <h3 class="choose_lists_item_title">教育方針</h3>
@@ -66,7 +72,7 @@
               <li class="choose_lists_item">
                 <span>02</span>
                 <div class="choose_lists_item_img">
-                  <img src="img/level_up.png">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/level_up.png">
                 </div>
                 <div class="choose_lists_item_part">
                   <h3 class="choose_lists_item_title">成長意欲の重視</h3>
@@ -77,7 +83,7 @@
               <li class="choose_lists_item">
                 <span>03</span>
                 <div class="choose_lists_item_img">
-                  <img src="img/system_up.png">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/system_up.png">
                 </div>
                 <div class="choose_lists_item_part">
                   <h3 class="choose_lists_item_title">常に進化するシステム</h3>
@@ -88,7 +94,7 @@
           </div>
         </div>
       </div>
-      <img src="img/circle.png" class="circle">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/circle.png" class="circle">
     </section>
 
     <section class="blast_about">
@@ -113,7 +119,7 @@
             </p>
           </div>
           <div class="blast_about_right">
-            <img src="img/blast_about.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/blast_about.png">
           </div>
         </div>
       </div>
@@ -261,7 +267,7 @@
                 </p>
 
                 <div class="second_features_img">
-                  <img src="img/second_feature.png" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/second_feature.png" alt="">
                 </div>
               </div>
             </li>
@@ -283,7 +289,7 @@
                 </p>
 
                 <div class="three_features_img">
-                  <img src="img/three_feature.png" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/three_feature.png" alt="">
                 </div>
               </div>
             </li>
@@ -360,31 +366,31 @@
             <h4 class="usage_flow_title">STEP 1</h4>
             <p class="usage_flow_msg">問い合わせ</p>
             <div class="usage_flow_img">
-              <img src="img/mail.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/mail.svg">
             </div>
           </div>
 
           <div class="usage_flow_arrow_img">
-            <img src="img/flow_arrow.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/flow_arrow.png">
           </div>
 
           <div class="usage_flow_item">
             <h4 class="usage_flow_title">STEP 2</h4>
             <p class="usage_flow_msg">個別相談</p>
             <div class="usage_flow_img">
-              <img src="img/talk.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/talk.svg">
             </div>
           </div>
 
           <div class="usage_flow_arrow_img">
-            <img src="img/flow_arrow.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/flow_arrow.png">
           </div>
 
           <div class="usage_flow_item">
             <h4 class="usage_flow_title">STEP 3</h4>
             <p class="usage_flow_msg">ご利用開始</p>
             <div class="usage_flow_img">
-              <img src="img/good.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/good.svg">
             </div>
           </div>
         </div>
@@ -403,7 +409,7 @@
           <li class="faq_lists_item">
             <div class="faq_top faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_q.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_q.png">
               </div>
               <p class="faq_question_msg">
                 投資をやったことない人でも授業のスピードについてこれますか？
@@ -411,7 +417,7 @@
             </div>
             <div class="faq_under faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_a.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_a.png">
               </div>
               <p class="faq_answer_msg">
                 はい。可能です。投資を始めたことがない、知識が0という方向けの環境となっているので、楽しく、深く学ぶことが出来ます。
@@ -422,7 +428,7 @@
           <li class="faq_lists_item">
             <div class="faq_top faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_q.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_q.png">
               </div>
               <p class="faq_question_msg">
                 投資を既に始めてる方でも学ぶ必要はありますか？
@@ -430,7 +436,7 @@
             </div>
             <div class="faq_under faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_a.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_a.png">
               </div>
               <p class="faq_answer_msg">
                 はい。あります。経験してる方にも学ぶことをおすすめします。理由としまして、自分の今持ってる知識の確かめをすることによって次の投資のステップにいくきっかけとしておすすめしてます。
@@ -441,7 +447,7 @@
           <li class="faq_lists_item">
             <div class="faq_top faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_q.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_q.png">
               </div>
               <p class="faq_question_msg">
                 毎日どのくらいの勉強時間を受講生はしていますか？
@@ -449,7 +455,7 @@
             </div>
             <div class="faq_under faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_a.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_a.png">
               </div>
               <p class="faq_answer_msg">
                 1週間単位で見ると約180分となってます。なので1日約25分です。無理なくスキマ時間での学習が出来ます。<br>
@@ -461,7 +467,7 @@
           <li class="faq_lists_item">
             <div class="faq_top faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_q.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_q.png">
               </div>
               <p class="faq_question_msg">
                 投資のリスク管理方法についての学びはありますか？
@@ -469,7 +475,7 @@
             </div>
             <div class="faq_under faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_a.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_a.png">
               </div>
               <p class="faq_answer_msg">
                 もちろんあります。投資は短期的に増やすと言うよりも長期的に資産をゆっくりと増やしていくものです。<br>
@@ -481,7 +487,7 @@
           <li class="faq_lists_item">
             <div class="faq_top faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_q.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_q.png">
               </div>
               <p class="faq_question_msg">
                 投資の目標の立て方が分からない人にはどのように教えてますか？
@@ -489,7 +495,7 @@
             </div>
             <div class="faq_under faq_common">
               <div class="faq_q_img">
-                <img src="img/q&a_a.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/q&a_a.png">
               </div>
               <p class="faq_answer_msg">
                 目標達成に向けてどのような投資が適しているのかをリサーチし、計画を立てます。<br>
@@ -525,5 +531,6 @@
       <p>Copyright ©︎ コミュスタBLAST all rights reserved.</p>
     </div>
   </footer>
+  <?php get_footer(); ?>
 </body>
 </html>
