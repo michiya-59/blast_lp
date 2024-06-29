@@ -62,7 +62,7 @@
         <div class="contact_right">
           <form class="contact_form">
             <div class="form_group">
-                <label for="name">お名前 <span class="required">必須</span></label>
+                <label for="name">テストお名前 <span class="required">必須</span></label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form_group">
